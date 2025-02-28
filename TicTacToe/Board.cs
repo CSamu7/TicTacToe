@@ -51,10 +51,13 @@
 
     private bool CheckLines(Figures figure) 
     {
-        for (int i = 0;i < 3;i++) 
+        for (int i = 0;i < 9;i+=3) 
         {
             if (board[i] == figure && board[i + 1] == figure && board[i + 2] == figure) return true;
+        }
 
+        for (int i = 0; i < 3; i++) 
+        {
             if (board[i] == figure && board[i + 3] == figure && board[i + 6] == figure) return true;
         }
 
